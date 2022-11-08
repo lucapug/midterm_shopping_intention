@@ -6,4 +6,4 @@ include:
   - "*.py"
 python:
   packages:
-    - sklearn
+    - scikit-learn
