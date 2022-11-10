@@ -1,4 +1,4 @@
-# midterm_shopping_intention
+# midterm  - shopping intention classifier
 
 ## **Problem statement:**
 
@@ -21,7 +21,11 @@ The dataset was formed so that each session would belong to a different user in 
 
 ICS UCI ML Repository: [UCI Machine Learning Repository: Online Shoppers Purchasing Intention Dataset Data Set](https://archive.ics.uci.edu/ml/datasets/Online+Shoppers+Purchasing+Intention+Dataset))
 
-the project was executed in a conda environment and the list of dependencies is in requirements.txt  (sorry 😕 , there are more than the essential dependencies because the conda enviroment is the one I make use of for the entire ml-zoomcamp course 2022 till now (week 7))
+
+
+## Description of the Project and of the steps to reproduce it
+
+The project was executed in a conda environment and the list of dependencies is in requirements.txt  (sorry 😕 , there are more than the essential dependencies because the conda enviroment is the one I make use of for the entire ml-zoomcamp course 2022 till now (week 7))
 
 * notebook.ipynb contains EDA and the final Model selection.
   sandbox.ipynb contains a messy :) ,constituted by various experiments that eventually converged in the notebook.ipynb,
