@@ -27,36 +27,36 @@ ICS UCI ML Repository: [UCI Machine Learning Repository: Online Shoppers Purchas
 
 The project was executed in a conda environment and the list of dependencies is in requirements.txt  (sorry 😕 , there are more than the essential dependencies because the conda enviroment is the one I make use of for the entire ml-zoomcamp course 2022 till now (week 7))
 
-* notebook.ipynb contains EDA and the final Model selection.
+* *notebook.ipynb* contains EDA and the final Model selection.
   sandbox.ipynb contains a messy :) ,constituted by various experiments that eventually converged in the notebook.ipynb,
-* train.py contains the logic for training from CLI the final model detrmined in notebook.ipynb
+* *train.py* contains the logic for training from CLI the final model detrmined in notebook.ipynb
 
 for the deployment of the model as a service BentoML framework has been used. In particular, service.py and bentofile.yaml are part of the depolyment with bentoml.
 
-* service.py contains the logic for the prediction service.
-* bentofile.yaml contains the dependencies.
+* *service.py* contains the logic for the prediction service.
+* *bentofile.yaml* contains the dependencies.
 
 to try in localhost the service:
 
-bentoml serve service.py:svc --reload
+`bentoml serve service.py:svc --reload`
 
 then the service can be checked through a swaggerUI interface in the browser
 
 by executing:
 
-bentoml build
+`bentoml build`
 
 a bento archive is built. The bento definition from the official docs is: 'Bento 🍱 is a file archive with all the source code, models, data files and dependency configurations required for running a user-defined bentoml.Service, packaged into a standardized format.'. In particular in the bento archive is included a Dockerfile
 
 in order to containeraize the service from the bento archive:
 
-bentoml containerize midterm_classifier:xxxxxxxxxxxxxxx
+`bentoml containerize midterm_classifier:xxxxxxxxxxxxxxx`
 
 where midterm_classifier:xxxxxxxxxxxxxxx is the tag of the bento archive (as an example: bentoml containerize midterm_classifier:oah24sc6xgqjouon)
 
 now to serve the prediction as a containerized service, execute:
 
-docker run -it --rm -p 3000:3000 midterm_classifier:oah24sc6xgqjouon
+`docker run -it --rm -p 3000:3000 midterm_classifier:oah24sc6xgqjouon`
 (docker has to be installed to execute the last command.)
 
 As a last note, I made this project in a Linux environment (Ubuntu 22.04) over a Windows OS (win11) by using WSL2 virtualization. Docker Desktop was installed in Windows and VSCode was used as IDE.
