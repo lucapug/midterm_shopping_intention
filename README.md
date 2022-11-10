@@ -6,7 +6,7 @@ By analyzing data from online sessions of candidate shoppers, the objective is t
 
 ## **Dataset Information:**
 
-The dataset consists of feature vectors belonging to 12,330 sessions.
+The dataset consists of feature vectors belonging to 12,330 online sessions.
 
 The dataset was formed so that each session would belong to a different user in a 1-year period to avoid any tendency to a specific campaign, special day, user profile, or period.
 
@@ -17,7 +17,7 @@ ICS UCI ML Repository: [UCI Machine Learning Repository: Online Shoppers Purchas
 the project was executed in a conda environment and the list of dependencies is in requirements.txt  (sorry, there are more than the essential dependencies because the conda enviroment is the one I make use of for the entire ml-zoomcamp course 2022 till now (week 7))
 
 notebook.ipynb contains EDA and the final Model selection. 
-sandbox.ipynb contains a messy :) ,constituted by various experiments that eventually converged in the notebook.ipynb
+sandbox.ipynb contains a messy :) ,constituted by various experiments that eventually converged in the notebook.ipynb, 
 train.py contains the logic for training from CLI the final model detrmined in notebook.ipynb
 
 for the deployment of the model as a service BentoML framework has been used. In particular, service.py and bentofile.yaml are part of the depolyment with bentoml.
